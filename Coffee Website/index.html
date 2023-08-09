@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="overflow-hidden">
+    <header id="header"
+        class="fixed top-0 right-0 left-0 z-50 border-b border-[#ffffff4d] flex justify-between items-center md:py-4 md:px-[7%] py-4 px-3 bg-black">
+        <a href="#" id="logo">
+            <img class="h-12 md:h-16" src="./images/logo.png" alt="Coffee Logo">
+        </a>
+        <nav id="nav-bar">
+            <ul id="Navigation"
+                class="p-4 text-black bg-white absolute top-full right-0 h-screen w-1/2 md:flex md:space-x-4 md:text-white md:h-auto md:w-auto md:static md:bg-transparent md:p-0 transform translate-x-96 md:translate-x-0 duration-150">
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#about">About</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#products">Products</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li class="hover:text-[#d3ad7f] cursor-pointer duration-150 pb-2 hover:border-[#d3ad7f] hover:border-b">
+                    <a href="#blogs">Blogs</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="icon">
+            <div onClick="searchQuery()"
+                class="fas fa-search text-white hover:text-[#d3ad7f] cursor-pointer text-2xl mx-2 duration-150"></div>
+            <div onClick="ToggleCart()"
+                class="fas fa-shopping-cart text-white hover:text-[#d3ad7f] cursor-pointer text-2xl mx-2 duration-150">
+            </div>
+            <div onClick="NavSideBar()"
+                class="fas fa-bars text-white hover:text-[#d3ad7f] cursor-pointer text-2xl mx-2 md:hidden duration-150">
+            </div>
+        </div>
+        <div id="search" class="absolute top-[115%] right-[7%] bg-white flex items-center transform -translate-y-48">
+            <input class="h-full w-full text-md text-black p-2" type="search" id="search-bar"
+                placeholder="Enter your Query...">
+            <label for="search-bar" class="fas fa-search cursor-pointer text-black hover:text-[#d3ad7f] mr-2"></label>
+        </div>
+        <div id="Cart"
+            class="cart-container bg-[#fcf3e5] absolute top-full right-0 h-screen overflow-y-auto w-[80vw] md:w-[22rem] py-2 px-6 shadow-lg shadow-[#d3ad7f] transform translate-x-96 duration-150">
+            <div class="cart-item relative my-8 flex items-center gap-4">
+                <span
+                    class="fas fa-times text-lg absolute top-4 right-0 text-black hover:text-[#d3ad7f] duration-75 cursor-pointer"></span>
+                <img src="images/cart-item-1.png" alt="" class="h-20">
+                <div class="description">
+                    <h3 class="text-xl tracking-tight text-black pb-2 font-bold">Cart item 01</h3>
+                    <span class="price text-sm text-[#d3ad7f]">$15.03/-</span>
+                </div>
+            </div>
+            <div class="cart-item relative my-8 flex items-center gap-4">
+                <span
+                    class="fas fa-times text-lg absolute top-4 right-0 text-black hover:text-[#d3ad7f] duration-75 cursor-pointer"></span>
+                <img src="images/cart-item-2.png" alt="" class="h-20">
+                <div class="description">
+                    <h3 class="text-xl tracking-tight text-black pb-2 font-bold">Cart item 02</h3>
+                    <span class="price text-sm text-[#d3ad7f]">$15.03/-</span>
+                </div>
+            </div>
+            <div class="cart-item relative my-8 flex items-center gap-4">
+                <span
+                    class="fas fa-times text-lg absolute top-4 right-0 text-black hover:text-[#d3ad7f] duration-75 cursor-pointer"></span>
+                <img src="images/cart-item-3.png" alt="" class="h-20">
+                <div class="description">
+                    <h3 class="text-xl tracking-tight text-black pb-2 font-bold">Cart item 03</h3>
+                    <span class="price text-sm text-[#d3ad7f]">$15.03/-</span>
+                </div>
+            </div>
+            <div class="cart-item relative my-8 flex items-center gap-4">
+                <span
+                    class="fas fa-times text-lg absolute top-4 right-0 text-black hover:text-[#d3ad7f] duration-75 cursor-pointer"></span>
+                <img src="images/cart-item-4.png" alt="" class="h-20">
+                <div class="description">
+                    <h3 class="text-xl tracking-tight text-black pb-2 font-bold">Cart item 04</h3>
+                    <span class="price text-sm text-[#d3ad7f]">$15.03/-</span>
+                </div>
+            </div>
+            <button
+                class="btn inline-block py-3 px-12 text-white bg-[#d3ad7f] hover:tracking-[0.2em] duration-300 w-full text-center font-bold"><a>Check
+                    Out</a></button>
+        </div>
+    </header>
+    <section id="home"
+        class="min-h-screen flex items-center bg-[url(images/home-img.jpeg)] bg-cover bg-no-repeat bg-center p-4 md:p-24">
+        <div id="home-content" class="max-w-[30rem]">
+            <h1 class="text-white text-4xl md:text-6xl font-bold text-center md:text-left">Fresh Coffee In Morning</h1>
+            <p class="text-gray-300 font-light my-4 text-lg md:text-xl text-center md:text-left">Lorem, ipsum dolor sit
+                amet consectetur adipisicing elit. Eveniet, amet odio?</p>
+            <button
+                class="btn block py-3 px-12 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold mx-auto md:mx-0"><a>Have
+                    One</a></button>
+        </div>
+    </section>
+    <section id="about" class="min-h-screen">
+        <h2
+            class="bg-gradient-to-r from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center">
+            ABOUT US</h2>
+        <div class="flex flex-col md:flex-row p-4 md:px-16 md:py-8">
+            <img src="images/about-img.jpeg" alt="" class="md:w-[44vw]">
+            <div class="bg-[#24243883] py-12 px-4">
+                <h3 class="text-white font-semibold text-3xl ">What Makes Our Coffee So Special?</h3>
+                <p class="my-4 text-lg font-light text-gray-300 ">Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Ullam et, ut, fugiat, eius unde ducimus esse eligendi eveniet nulla ex sapiente mollitia
+                    consectetur a quisquam in nihil natus non dolore saepe ab sed! Minima.</p>
+                <p class="my-4 text-lg font-light text-gray-300 ">Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Ullam et, ut, fugiat, eius unde ducimus esse eligendi eveniet nulla ex sapiente mollitia
+                    consectetur a quisquam in nihil natus non dolore saepe ab sed! Minima.</p>
+                <button
+                    class="btn block py-3 px-12 my-4 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Learn
+                        More</a></button>
+            </div>
+        </div>
+    </section>
+    <section id="menu" class="min-h-screen my-8">
+        <h2
+            class="bg-gradient-to-l from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center mb-8">
+            OUR MENU</h2>
+        <div id="Menu-containter"
+            class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-6">
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-1.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">AFFOGATO</h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$3.99</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$5.53</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-2.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">AMERICANO </h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$4.65</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$7.82</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-3.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">CAFFÈ LATTE</h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$2.33</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$4.23</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-4.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">CAFFÈ MOCHA</h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$3.33</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$5.12</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-5.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">CAFÈ AU LAIT</h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$3</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$4.23</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+            <div
+                class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center hover:bg-white duration-150 group">
+                <img src="images/menu-6.png" alt="">
+                <h4 class="text-white group-hover:text-black duration-150 font-semibold text-2xl p-1 my-2">CAPPUCCINO</h4>
+                <div>
+                    <span class="text-xl text-white group-hover:text-black duration-150 font-medium">$1.54</span> <span
+                        class="text-sm text-gray-300 group-hover:text-black duration-150 font-light line-through">$4.65</span>
+                </div>
+                <button
+                    class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Add
+                        To Cart</a></button>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="my-8">
+        <h2
+            class="bg-gradient-to-l from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center mb-8">
+            OUR PRODUCTS</h2>
+        <div id="Product-containter"
+            class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-6">
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center duration-150">
+                <div class="flex justify-center items-center space-x-2 mb-6">
+                    <div
+                        class="fas fa-shopping-cart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-heart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-eye text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                </div>
+                <img src="images/product-1.png" alt="">
+                <h4 class="text-white font-semibold text-2xl mt-3">Arabica Beans</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star-half-alt text-[#d3ad7f] text-lg"></div>
+                </div>
+                <div>
+                    <span class="text-xl text-white font-medium">$20.99</span> <span
+                        class="text-sm text-gray-300 font-light line-through">$25</span>
+                </div>
+            </div>
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center duration-150">
+                <div class="flex justify-center items-center space-x-2 mb-6">
+                    <div
+                        class="fas fa-shopping-cart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-heart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-eye text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                </div>
+                <img src="images/product-2.png" alt="">
+                <h4 class="text-white font-semibold text-2xl mt-3">Robusta Beans</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star-half-alt text-[#d3ad7f] text-lg"></div>
+                </div>
+                <div>
+                    <span class="text-xl text-white font-medium">$20.99</span> <span
+                        class="text-sm text-gray-300 font-light line-through">$25</span>
+                </div>
+            </div>
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center duration-150">
+                <div class="flex justify-center items-center space-x-2 mb-6">
+                    <div
+                        class="fas fa-shopping-cart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-heart text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                    <div
+                        class="fas fa-eye text-white p-2 text-2xl border border-[#ffffff4d] cursor-pointer hover:bg-[#d3ad7f] duration-150">
+                    </div>
+                </div>
+                <img src="images/product-3.png" alt="">
+                <h4 class="text-white font-semibold text-2xl mt-3">Excelsa Beans</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star-half-alt text-[#d3ad7f] text-lg"></div>
+                </div>
+                <div>
+                    <span class="text-xl text-white font-medium">$20.99</span> <span
+                        class="text-sm text-gray-300 font-light line-through">$25</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="min-h-screen py-8">
+        <h2
+            class="bg-gradient-to-tr from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center mb-8">
+            TESTIMONIALS</h2>
+        <div id="testimonial-containter"
+            class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-6">
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center">
+                <img src="images/quote-img.png" alt="">
+                <blockquote class="text-center text-gray-300 my-4">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptate commodi fuga odit aliquid repellat delectus. Ipsam maiores adipisci labore optio
+                    quas unde perferendis.</blockquote>
+                <img src="images/pic-1.png" class="w-20 h-20 rounded-full" alt="">
+                <h4 class="text-white font-semibold text-2xl p-1 my-2">Roger David</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                </div>
+            </div>
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center">
+                <img src="images/quote-img.png" alt="">
+                <blockquote class="text-center text-gray-300 my-4">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptate commodi fuga odit aliquid repellat delectus. Ipsam maiores adipisci labore optio
+                    quas unde perferendis.</blockquote>
+                <img src="images/pic-2.png" class="w-20 h-20 rounded-full" alt="">
+                <h4 class="text-white font-semibold text-2xl p-1 my-2">Anjelah Johnson</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                </div>
+            </div>
+            <div class="border border-[#ffffff4d] p-8 flex flex-col justify-center items-center">
+                <img src="images/quote-img.png" alt="">
+                <blockquote class="text-center text-gray-300 my-4">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptate commodi fuga odit aliquid repellat delectus. Ipsam maiores adipisci labore optio
+                    quas unde perferendis.</blockquote>
+                <img src="images/pic-3.png" class="w-20 h-20 rounded-full" alt="">
+                <h4 class="text-white font-semibold text-2xl p-1 my-2">John Micheal</h4>
+                <div class="flex items-center justify-center">
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                    <div class="fas fa-star text-[#d3ad7f] text-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="min-h-screen">
+        <h2
+            class="bg-gradient-to-r from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center">
+            CONTACT US</h2>
+        <div class="flex flex-col md:flex-row p-4 md:px-16 md:py-8">
+            <iframe class="md:w-[90vw] h-[60vh] md:h-auto" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54426.06613901443!2d74.31295740472412!3d31.506876298605118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc71bcb60c83fe952!2sOptions%20-%20Coffee%20%26%20More!5e0!3m2!1sen!2s!4v1669056808375!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="bg-[#24243883] py-12 px-4 w-full">
+                <h3 class="text-white font-semibold text-3xl text-center my-4">GET IN TOUCH</h3>
+                <form class="space-y-4">
+                    <div class="flex border-2 border-[#ffffff4d] bg-black py-3 px-2 items-center">
+                        <span class="fas fa-user text-white p-1 pr-2 pb-2"></span>
+                        <input class="outline-none w-full bg-black text-white" type="text" placeholder="Name">
+                    </div>
+                    <div class="flex border-2 border-[#ffffff4d] bg-black py-3 px-2 items-center">
+                        <span class="fas fa-envelope text-white p-1 pr-2 pb-2"></span>
+                        <input class="outline-none w-full bg-black text-white" type="text" placeholder="Email">
+                    </div>
+                    <div class="flex border-2 border-[#ffffff4d] bg-black py-3 px-2 items-center">
+                        <span class="fas fa-phone text-white p-1 pr-2 pb-2"></span>
+                        <input class="outline-none w-full bg-black text-white" type="text" placeholder="Number">
+                    </div>
+                </form>
+                <button
+                    class="btn block py-3 px-12 my-4 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold mx-auto"><a>Contact Now</a></button>
+            </div>
+        </div>
+    </section>
+    <section id="blogs" class="my-8">
+        <h2
+            class="bg-gradient-to-tr from-[#d3ad7f] to-white text-5xl text-transparent font-bold bg-clip-text text-center mb-8">
+            MY BLOGS</h2>
+        <div id="blog-containter"
+            class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-6">
+            <article class="relative border border-[#ffffff4d] flex flex-col justify-center items-center">
+                <div class="w-full overflow-hidden">
+                    <img src="images/blog-1.jpeg" alt="" class="h-full w-full object-cover transform hover:scale-105 duration-300">
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-white font-medium text-2xl my-2">How Coffee make you productive</h3>
+                    <div class="flex items-center my-4">
+                        <img src="images/pic-1.png" alt="" class="w-8 h-8 rounded-full mr-2">
+                        <span class="text-[#d3ad7f] font-light text-sm">By Roger David - On 18th Augest, 2022</span>
+                    </div>
+                    <p class="text-gray-300 font-light text-md">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Pariatur voluptate autem nostrum!</p>
+                    <button
+                        class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Read
+                            More</a></button>
+                </div>
+            </article>
+            <article class="relative border border-[#ffffff4d] flex flex-col justify-center items-center">
+                <div class="w-full overflow-hidden">
+                    <img src="images/blog-2.jpeg" alt="" class="h-full w-full object-cover transform hover:scale-105 duration-300">
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-white font-medium text-2xl my-2">Resons why you should drink coffee</h3>
+                    <div class="flex items-center my-4">
+                        <img src="images/pic-2.png" alt="" class="w-8 h-8 rounded-full mr-2">
+                        <span class="text-[#d3ad7f] font-light text-sm">By Anjelah Johnson - On 18th Augest, 2022</span>
+                    </div>
+                    <p class="text-gray-300 font-light text-md">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Pariatur voluptate autem nostrum!</p>
+                    <button
+                        class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Read
+                            More</a></button>
+                </div>
+            </article>
+            <article class="relative border border-[#ffffff4d] flex flex-col justify-center items-center">
+                <div class="w-full overflow-hidden">
+                    <img src="images/blog-3.jpeg" alt="" class="h-full w-full object-cover transform hover:scale-105 duration-300">
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-white font-medium text-2xl my-2">Mind blowing facts about coffee</h3>
+                    <div class="flex items-center my-4">
+                        <img src="images/pic-3.png" alt="" class="w-8 h-8 rounded-full mr-2">
+                        <span class="text-[#d3ad7f] font-light text-sm">By John Micheal - On 18th Augest, 2022</span>
+                    </div>
+                    <p class="text-gray-300 font-light text-md">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Pariatur voluptate autem nostrum!</p>
+                    <button
+                        class="btn block py-2 px-8 my-2 text-white bg-[#d3ad7f] hover:tracking-[0.17em] duration-300 max-w-1/2 text-center font-bold"><a>Read
+                            More</a></button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer class="flex flex-col justify-center items-center border-t border-[#ffffff4d]">
+        <div class="flex justify-center items-center space-x-3 my-4">
+            <div
+                class="fab fa-facebook-f text-white hover:bg-[#d3ad7f] border border-[#ffffff4d] text-2xl w-12 h-12 px-4 py-2 rounded-full duration-150 cursor-pointer">
+            </div>
+            <div
+                class="fab fa-twitter text-white hover:bg-[#d3ad7f] border border-[#ffffff4d] text-2xl w-12 h-12 px-3 py-2 rounded-full duration-150 cursor-pointer">
+            </div>
+            <div
+                class="fab fa-instagram text-white hover:bg-[#d3ad7f] border border-[#ffffff4d] text-2xl w-12 h-12 px-3 py-2 rounded-full duration-150 cursor-pointer">
+            </div>
+            <div
+                class="fab fa-pinterest text-white hover:bg-[#d3ad7f] border border-[#ffffff4d] text-2xl w-12 h-12 px-3 py-2 rounded-full duration-150 cursor-pointer">
+            </div>
+            <div
+                class="fab fa-linkedin text-white hover:bg-[#d3ad7f] border border-[#ffffff4d] text-2xl w-12 h-12 px-3 py-2 rounded-full duration-150 cursor-pointer">
+            </div>
+        </div>
+        <nav id="Navigation-on-footer">
+            <ul id="Navigation2" class="p-4 flex flex-wrap justify-center items-center  text-white">
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#about">About</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#products">Products</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li class="hover:bg-[#d3ad7f] cursor-pointer duration-150 py-1 px-4 border border-[#ffffff4d] mx-2 my-1">
+                    <a href="#blogs">Blogs</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="text-white font-bold my-4 text-lg md:text-xl text-center">Another project by <a href="https://dailyreading.ml" class="text-[#d3ad7f]">Dailyreading Admin</a> | 21st Nov, 2022</div>
+    </footer>
+ <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

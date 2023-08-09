@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    transition: all .2s linear;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ed2d34;
+}
+.header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20rem;
+    padding: 1rem;
+    background-color: #ed2d34;
+    transform: translateX(-24rem);
+}
+.header.active{
+    transform: translateX(0);
+}
+.header .logo{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+}
+.header .navbar{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+.header .navbar a{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+.header .navbar li{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.header .navbar a:hover{
+    text-decoration: underline;
+}
+.home {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    gap: 3rem;
+}
+
+.home .content,
+.home .image{
+    margin-top: 7rem;
+}
+
+.home .content span{
+    color: #ed2d34;
+    font-size: 1.6rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.home .content h3{
+    color: #444;
+    font-size: 2.2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.home .content p{
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.home .image{
+    display: flex;
+    flex: 1 1 60rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.products-slider{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.product .shoes{
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.product .shoes img{
+    width: 15rem;
+}
+.product .shoes h6{
+    font-size: 2rem;
+    color: #444;
+    font-weight: 500;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.features{
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .box{
+    text-align: center;
+}
+.features .box .fas{
+    font-size: 2.8rem;
+    color: #ed2d34;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.features .box .p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #333;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.testimonials{
+    padding: 1rem;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonials .box{
+    text-align: center;
+}
+.testimonials .box i {
+    font-size: 3.5rem;
+    color: #666;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.testimonials .box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 2;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.testimonials .box img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+}
+.testimonials .box span {
+    display: block;
+    font-size: 1.5rem;
+    font-size: 800;
+    color: #444;
+}
+.contact{
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+}
+.contact .flex{
+    display: flex;
+    gap: 1.5rem;
+}
+.contact .flex form{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 35rem;
+}
+.contact .flex form input,
+.contact .flex form textarea{
+    border-bottom: 2px solid #333;
+    color: #666;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+.contact .flex form input::placeholder,
+.contact .flex form textarea::placeholder{
+    color: #444;
+}
+.contact .flex form input:focus,
+.contact .flex form textarea:focus{
+    border-color: #ed2d34;
+}
+.contact .info h5{
+    color: #444;
+    font-size: 2rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+.contact .info p{
+    color: #666;
+    font-size: 1rem;
+    line-height: 2;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+.contact .info .icons .icon{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.contact .info .icons i{
+    padding: .75rem;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    border-radius: 9999px;
+    background-color: #ed2d34;
+    color: white;
+}
+.contact .info .icons span{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
+}
+.contact .info .socials{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contact .info .socials div{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    color: #666;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.contact .info .socials div:hover{
+    color: #ed2d34;
+}
+@media (max-width:768px) {
+    .contact .flex{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width:640px) {
+    .home {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 0;
+    }
+    .home .image{
+        display: block;
+        flex: none;
+    }
+    .features{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .features .box{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .contact .info .icons .icon{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact .info .icons span{
+        margin-top: .5rem;
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.active{
+        padding-left: 20rem;
+    }
+}
+
+
+
+
+
+
+/*  */
+.btn{
+    padding: .75rem 1.5rem;
+    color: #666;
+    font-size: 1rem;
+    background-color: transparent;
+    border-radius: 9999px;
+    border: 2px solid #777;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #ed2d34;
+    border-color: #ed2d34;
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #444;
+}
+.heading span{
+    color: #ed2d34;
+}
+
+.hamburger{
+    background-color: #ed2d34;
+    color: white;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    padding: .75rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.hamburger.active{
+    z-index: 20;
+    left: 16rem;
+    top: .5rem;
+}

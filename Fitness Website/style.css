@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    transition: .2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    z-index: 101;
+}
+
+header section {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.logo span {
+    color: red;
+}
+
+header nav {
+    z-index: 10;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+header nav ul li a:hover {
+    color: red;
+}
+
+header .fas {
+    display: none;
+}
+
+.home .bg {
+    min-height: 80vh;
+    object-fit: cover;
+}
+
+.home .bg1 {
+    background: #ffffff url(/images/home-bg-1.jpg) no-repeat top;
+
+}
+
+.home .bg2 {
+    background: #ffffff url(/images/home-bg-2.jpg) no-repeat top;
+}
+
+.home .bg3 {
+    background: #ffffff url(/images/home-bg-3.jpg) no-repeat top;
+}
+
+.home .content {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.home .content .cover {
+    max-width: 40rem;
+}
+
+.home .content span {
+    color: red;
+    font-size: 2rem;
+}
+
+.home .content h6 {
+    color: white;
+    font-size: 3.6rem;
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about {
+    display: flex;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.about .image img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.about .image {
+    position: relative;
+    width: 100%;
+}
+
+.about .image::before,
+.about .image::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: red;
+    height: 15rem;
+    width: 15rem;
+}
+
+.about .image::after {
+    bottom: 6px;
+    right: 0;
+}
+
+.about .content {
+    margin-left: 4rem;
+}
+
+.about .content span {
+    color: red;
+    font-size: 1.4rem;
+}
+
+.about .content h6 {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+.about .content p {
+    color: rgb(173, 173, 173);
+    font-size: 1rem;
+}
+
+.about .content ul {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about .content ul div {
+    flex: 1 1 15rem;
+}
+
+.about .content li {
+    color: red;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.about .content li span {
+    color: white;
+    margin-left: .5rem;
+}
+
+.about .content p {
+    color: rgb(192, 192, 192);
+    font-size: .9rem;
+    line-height: 2;
+}
+
+.features {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features .box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.features .second-box {
+    flex-direction: column-reverse;
+}
+
+.features .box .img {
+    width: 24rem;
+}
+
+.features .box .img:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.features .box .content {
+    color: white;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    width: 24rem;
+    z-index: 1;
+}
+
+.features .box .content img {
+    filter: invert(1);
+    height: 6rem;
+    width: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features .box .content span {
+    color: red;
+    font-size: 1.3rem;
+    margin: .25rem;
+}
+
+.features .box .content p {
+    color: rgb(184, 184, 184);
+    font-size: 1.1rem;
+    margin: .25rem;
+}
+
+.pricing {
+    margin: 4rem auto;
+    max-width: 72rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.pricing .box span {
+    color: red;
+    font-size: 1.3rem;
+}
+
+.pricing .box h4 {
+    color: white;
+    font-size: 2.7rem;
+    line-height: 1.2;
+    margin: .5rem auto;
+}
+
+.pricing .box p {
+    color: rgb(192, 192, 192);
+    font-size: .9rem;
+    line-height: 2;
+}
+
+.pricing ul li {
+    color: rgb(192, 192, 192);
+    margin: 1rem auto;
+}
+
+.pricing .second-box ul li {
+    margin: 1.5rem auto;
+}
+
+.pricing ul i {
+    color: red;
+    margin-right: 1rem;
+}
+
+.pricing .second-box {
+    padding: 1rem;
+    text-align: center;
+}
+
+.pricing .second-box h4 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.pricing .second-box p {
+    margin: 1rem auto;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.pricing .second-box p span {
+    color: red;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.trainers {
+    max-width: 72rem;
+    margin: auto;
+}
+
+.trainers .grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+.trainers .grid .box {
+    max-width: 20rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.trainers .grid .box img {
+    max-width: 20rem;
+    object-fit: cover;
+}
+
+.trainers .grid .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: #111;
+    color: white;
+    transform: translateY(4rem);
+}
+
+.trainers .grid .box:hover .content {
+    transform: translateY(0);
+}
+
+.trainers .grid .box .content span {
+    color: red;
+    font-size: .9rem;
+}
+
+.trainers .grid .box .content p {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.trainers .grid .box .content ul {
+    border-top: 1px solid white;
+}
+
+.trainers .grid .box .content ul li {
+    font-size: 1.5rem;
+    margin: 1rem .5rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.trainers .grid .box .content ul li:hover {
+    color: red;
+}
+
+.promotion {
+    padding: 4rem;
+    margin: 2rem auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.promotion .content {
+    max-width: 42rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.promotion span {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.promotion h6 {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+
+.promotion p {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    color: rgb(201, 201, 201);
+}
+
+.testimonial {
+    overflow: hidden;
+    max-width: 72rem;
+    padding: 1rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.testimonial .box-1 {
+    max-width: 30rem;
+}
+
+.testimonial .box-1 span {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.testimonial .box-1 h6 {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+
+.testimonial .box-1 p {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    color: rgb(201, 201, 201);
+}
+
+.testimonial .box-2 {
+    padding: .25rem 1rem;
+    max-width: 18rem;
+    background: linear-gradient(135deg, #111 90%, transparent 10%);
+}
+
+.testimonial .box-2 p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    line-height: 2;
+    font-size: 1.1rem;
+    color: rgb(201, 201, 201);
+}
+
+.testimonial .box-2 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonial .box-2 .content>*+* {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.testimonial .box-2 .content .cover {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial .box-2 .content img {
+    border-radius: 9999px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.testimonial .box-2 .content span {
+    margin-left: .5rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.testimonial .box-2 .content i {
+    padding: .5rem;
+    font-size: 2.5rem;
+    color: red;
+}
+
+.blogs {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.blogs .box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+}
+
+.blogs .box .image {
+    height: 25rem;
+    width: 100%;
+}
+
+.blogs .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogs .box .content {
+    padding: 1rem;
+}
+
+.blogs .box .content .credit {
+    color: white;
+    font-weight: 500;
+}
+
+.blogs .box .content .credit span {
+    color: red;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.blogs .box .content .credit span:hover {
+    color: whitesmoke;
+}
+
+.blogs .box .content h3 {
+    color: whitesmoke;
+    margin: .5rem 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.blogs .box .content p {
+    color: rgb(192, 192, 192);
+    margin: .5rem 0;
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.footer {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0 , 1fr));
+}
+
+.footer h5 {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.footer .quick ul li {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.footer .quick ul li a {
+    color: rgb(211, 211, 211);
+    font-size: .9rem;
+}
+.footer .quick ul li a:hover {
+    color: red;
+}
+
+.footer .timing ul li {
+    color: rgb(211, 211, 211);
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    font-size: .9rem;
+}
+
+.footer .timing ul li span {
+    color: red;
+    margin-left: .25rem;
+}
+
+.footer .contact ul li {
+    color: rgb(211, 211, 211);
+    font-size: .9rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.footer .contact ul li i {
+    color: red;
+    margin-right: .25rem;
+}
+.footer .letter p {
+    color: rgb(211, 211, 211);
+    font-size: .9rem;
+}
+
+.footer .letter input{
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 14rem;
+    background-color: #111;
+    color: rgb(216, 216, 216);
+}
+.footer .letter input::placeholder{
+    color: rgb(216, 216, 216);
+}
+.footer .letter ul li{
+    cursor: pointer;
+   background-color: #111;
+   padding: .8rem 1rem;
+   border-radius: 9999px;
+   font-size: 1.2rem;
+   color: white;
+   margin-top: .5rem;
+}
+
+.footer .letter ul li:hover{
+    background-color: red;
+}
+@media (max-width:798px) {
+    header nav {
+        background-color: black;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: .5rem 0;
+    }
+
+    header .fas {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    header .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .home .content .cover {
+        padding: 1rem;
+    }
+
+    .home .content h6 {
+        font-size: 3rem;
+    }
+
+    .home .content span {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about .content {
+        margin-left: 0;
+    }
+
+    .features {
+        padding: 1rem;
+    }
+    .features .box {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .features .second-box {
+        flex-direction: column;
+    }
+    .features .flex{
+        justify-content: center;
+    }
+    .pricing {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 1rem;
+    }
+    .trainers,
+    .promotion {
+        padding: 1rem;
+    }
+    .trainers .grid{
+        justify-items: center;
+    }
+    .testimonial {
+        padding: 1rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .testimonial .box-1 {
+        max-width: none;
+    }
+
+    .testimonial .box-2 {
+        margin: 1rem auto;
+        padding: 1rem;
+        max-width: 90vw;
+    }
+    .footer{
+        grid-template-columns: repeat(1, minmax(0 , 1fr));
+        padding: 1rem;
+    }
+}
+
+@media (min-width:550px) and (max-width:768px) {
+    .testimonial .box-2 {
+        max-width: calc(50vw - 1rem);
+    }
+    .pricing .box{
+        text-align: center;
+    }
+    .pricing .second-box{
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:550px) and (max-width:1024px) {
+    .footer{
+        grid-template-columns: repeat(2, minmax(0 , 1fr));
+    }
+}
+/* Swiper */
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    opacity: 1;
+    background: white;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red;
+    opacity: 1;
+}
+
+
+.btn {
+    padding: 0.5rem 1rem;
+    padding-right: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, red 90%, transparent 10%);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.heading span {
+    font-size: 2rem;
+    color: red;
+    background-color: black;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: .5rem;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(163, 163, 163);
+    z-index: -1;
+}

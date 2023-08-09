@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --blue: #00b8b8;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--light-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: .5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-bg);
+    border-bottom: var(--border);
+    padding: 1rem 6rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header.active {
+    background-color: var(--white);
+    border-bottom: none;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+}
+
+.header .logo span {
+    color: var(--blue);
+}
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav ul li {
+    list-style: none;
+    font-size: 1.1rem;
+    color: var(--light-color);
+}
+
+.header nav ul li a {
+    color: var(--light-color);
+}
+
+.header nav ul li a:hover {
+    color: var(--blue);
+}
+
+.header .fas {
+    display: none;
+}
+
+.home {
+    min-height: 100vh;
+    margin-top: 4rem;
+    background: url(images/home-bg.jpg) no-repeat top left;
+    background-size: 100vw 100vh;
+}
+
+.home .content{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 72rem;
+}
+.home h1 {
+    max-width: 40rem;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--black );
+}
+.home p {
+    line-height: 1.6;
+    max-width: 30rem;
+    font-size: 1rem;
+    color: var(--light-color);
+}
+
+.about{
+    min-height: 100vh;
+    max-width: 72rem;
+}
+.about .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .flex img{
+    margin-top: 4rem;
+    width: calc(100vw - 2rem);
+    /* padding: 0 2rem; */
+}
+
+.about .flex .content{
+    padding: 2rem;
+}
+.about .flex .content span{
+    color: var(--blue);
+    font-size: 1.4rem;
+}
+.about .flex .content h4{
+    color: var(--black);
+    font-size: 1.7rem;
+}
+.about .flex .content p{
+    color: var(--light-color);
+    font-size: .9rem;
+    line-height:2.2;
+}
+
+.services{
+    min-height: 100vh;
+    background-color: var(--light-bg);
+}
+.services h3{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+}
+.services .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(16rem , 1fr));
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 72rem;
+}
+.services .grid .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem 3rem;
+}
+
+.services .grid .box img{
+    width: 3rem;
+}
+.services .grid .box h5{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+.services .grid .box p{
+    color: var(--light-color);
+    font-size: .9rem;
+    line-height: 2;
+}
+.work{
+    padding: 1rem;
+}
+.work h3{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+}
+.work .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+    gap: 1.5rem;
+    max-width: 76rem;
+}
+.work .grid .box{
+    background-color: var(--blue);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+.work .grid .box img{
+    width: calc(100% - 2rem);
+}
+
+.work .grid .box p{
+    color: var(--white);
+    font-size: .9rem;
+    line-height: 2;
+}
+
+
+.testimonials{
+    min-height: 100vh;
+    background-color: var(--light-bg);
+}
+
+.testimonials h3{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+}
+.testimonials .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+    gap: 1.5rem;
+    max-width: 76rem;
+}
+.testimonials .grid .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+.testimonials .grid img{
+    border-radius: 9999px;
+    width: 8rem;
+}
+
+.testimonials .grid .box h5{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+.testimonials .grid .box p{
+    color: var(--black);
+    font-size: .9rem;
+    line-height: 2;
+}
+.testimonials .grid .box ul li{
+    color: var(--blue);
+}
+.contact{
+    padding: 1rem;
+    color: var(--black);
+}
+.contact h3{
+    font-size: 2rem;
+    text-align: center;
+}
+.contact form{
+    font-size: 1.2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+.contact form label{
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.contact form input{
+    background-color: white;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+footer{
+    background-color: var(--light-bg);
+}
+footer .grid{
+    display: grid;   
+    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+    gap: 2rem;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem ;
+}
+
+footer .grid .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+footer .grid .box .fas{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 9999px;
+}
+footer .grid .box h6{
+    color: var(--black);
+   font-size: 1.4rem;
+}
+footer .grid .box span{
+    color: var(--light-color);
+   font-size: 1rem;
+}
+footer .content{
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgb(136, 136, 136);
+    color: var(--black);
+}
+footer .content a{
+    color: var(--blue);
+}
+/* media */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1rem;
+    }
+
+    .header nav ul {
+        display: block;
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .header nav ul li {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        color: var(--light-color);
+    }
+
+    .header .btn {
+        display: none;
+    }
+
+    .header .fas {
+        display: inline-block;
+    }
+
+    .header ul {
+        background-color: var(--light-bg);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 27% 0, 100% 0, 70% 0);
+    }
+
+    .header ul.open {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    }
+
+    .header ul.active {
+        background-color: var(--white);
+        border-bottom: none;
+    }
+
+    .home {
+        background-color: var(--light-bg);
+        background-size: 0;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    .home h1{
+        font-size: 3rem;
+    }
+    .about .flex{
+        flex-direction: column;
+    }
+    .about .flex .content{
+        text-align: center;
+    }
+    .contact .book{
+        text-align: center;
+    }
+}
+
+/* utility classes */
+
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.my-4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.pt-8{
+    padding-top: 2rem;
+}
+.py-8{
+    padding-bottom: 2rem;
+}
+/* Goble */
+
+#menu {
+    transform: rotate(180deg);
+}
+
+.btn {
+    padding: 0.75rem 3rem;
+    background-color: var(--blue);
+    border-radius: .5rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--black);
+}

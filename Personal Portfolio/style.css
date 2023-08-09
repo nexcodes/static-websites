@@ -1,0 +1,803 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 1000;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.navbar a {
+    padding: 1rem;
+    font-size: 1rem;
+    background: #1a1a1a;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #fff;
+    text-align: center;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.navbar a i {
+    color: crimson;
+    padding-right: .5rem;
+}
+
+.navbar a:hover {
+    background: crimson;
+    padding-bottom: 4rem;
+}
+
+.navbar a:hover i {
+    color: #fff;
+}
+
+.navbar span {
+    display: inline;
+}
+
+.home {
+    min-height: 100vh;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home .flex {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.home .image img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.home .content {
+    max-width: 36rem;
+}
+
+.home .content h2 {
+    color: white;
+    font-size: 3rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.home .content span {
+    color: crimson;
+    font-size: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.home .content p {
+    color: rgb(168, 168, 168);
+    font-size: .9rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.home .content .button {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    display: inline-block;
+    padding: .75rem 1rem;
+    background-color: crimson;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.home .content .button a {
+    color: white;
+    font-size: 1rem;
+}
+
+.home .content .button i {
+    color: crimson;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 9999px;
+    margin-left: 1rem;
+}
+
+.home .content .button:hover a {
+    margin-right: 1rem;
+}
+
+.about {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.about h1 span {
+    color: crimson;
+}
+
+.about .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.about .flex .info,
+.about .flex .count {
+    width: 50%;
+}
+
+.about .flex .info h6 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about .flex .info .flex2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .flex .info .flex2 ul li {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: rgb(170, 170, 170);
+    font-weight: 300;
+}
+
+.about .flex .info .flex2 ul li span {
+    color: white;
+    font-weight: 800;
+}
+
+.about .flex .info .button {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: .75rem 1rem;
+    display: inline-block;
+    background-color: crimson;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.about .flex .info .button a {
+    color: white;
+    font-size: 1rem;
+}
+
+.about .flex .info .button i {
+    color: crimson;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 9999px;
+    margin-left: 1rem;
+}
+
+.about .flex .info .button:hover a {
+    margin-right: 1rem;
+}
+
+.about .flex .count .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about .flex .count .grid .box {
+    background-color: #1a1a1a;
+    box-shadow: 0 0.25rem .5rem rgb(0 0 0 / 70%);
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+}
+
+.about .flex .count .grid .box h4 {
+    color: crimson;
+    font-size: 2.5rem;
+}
+
+.about .flex .count .grid .box p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+.about .flex .count .grid .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skills {
+    padding: 1rem;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.skills h1 span {
+    color: crimson;
+}
+
+.skills .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 2rem;
+}
+
+.skills .grid .box {
+    text-align: center;
+    background-color: #1a1a1a;
+    box-shadow: 0 0.25rem .5rem rgb(0 0 0 / 70%);
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+}
+
+.skills .grid .box img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.skills .grid .box p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.education {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.education h1 span {
+    color: crimson;
+}
+
+.education .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education .flex .box{
+    position: relative;
+    border-left: 2px solid rgb(189, 189, 189);
+    flex: 1 1 30rem;
+    padding-left: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin-left: 1.5rem;
+}
+.education .flex .box i{
+    background-color: crimson;
+    color: white;
+    padding: .75rem;
+    border-radius: 9999px;
+    position: absolute;
+    left: -1.7rem;
+    top: 0;
+    font-size: 1.4rem;
+}
+.education .flex .box span{
+    font-size: .9rem;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 9999px;
+    padding: .3rem .75rem;
+}
+.education .flex .box h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.education .flex .box p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #eee;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.work {
+    padding: 1rem;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.work h1 span {
+    color: crimson;
+}
+
+.work .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.work .grid .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.work .grid .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work .grid .box .content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: #0d0d0d;
+    text-align: center;
+    transition: .4s ease-in-out;
+    transform: translateY(-20rem);
+}
+
+.work .grid .box:hover .content {
+    transform: translateY(0);
+}
+
+.work .grid .box .content h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.work .grid .box .content p {
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 2;
+    color: #eee;
+}
+
+.work .grid .box .content a {
+    font-size: 1rem;
+    font-weight: 300;
+    color: crimson;
+}
+
+.work .grid .box .content a:hover {
+    color: white;
+}
+
+.work .button {
+
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    display: inline-block;
+    padding: .75rem 1rem;
+    background-color: crimson;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.work .button a {
+    color: white;
+    font-size: 1rem;
+}
+
+.work .button i {
+    color: crimson;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 9999px;
+    margin-left: 1rem;
+}
+
+.work .button:hover a {
+    margin-right: 1rem;
+}
+
+.blogs {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.blogs h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.blogs h1 span {
+    color: crimson;
+}
+
+.blogs .content .button {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    display: inline-block;
+    padding: .75rem 1rem;
+    background-color: crimson;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.blogs .content .button a {
+    color: white;
+    font-size: 1rem;
+}
+
+.blogs .content .button i {
+    color: crimson;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 9999px;
+    margin-left: 1rem;
+}
+
+.blogs .content .button:hover a {
+    margin-right: 1rem;
+}
+
+.blogs .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .grid .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.blogs .grid .box .image {
+    overflow: hidden;
+    border-radius: .5rem;
+    width: 100%;
+    height: 20rem;
+}
+
+.blogs .grid .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogs .grid .box .image img:hover {
+    transform: scale(1.05);
+}
+
+.blogs .grid .box .credit {
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    transform: translateY(-1rem);
+}
+
+.blogs .grid .box .credit i {
+    color: crimson;
+    margin-right: .5rem;
+}
+
+.blogs .grid .box .credit span {
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+.blogs .grid .box .credit span:hover {
+    color: crimson;
+}
+
+.blogs .grid .box .content h6 {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
+}
+
+.blogs .grid .box .content p {
+    font-size: .9rem;
+    color: #eee;
+    font-weight: 300;
+}
+
+.contact {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact h1 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.contact h1 span {
+    color: crimson;
+}
+
+.contact .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact .flex .box {
+    width: 40%;
+}
+
+.contact .flex .box h4 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.contact .flex .box p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: rgb(196, 196, 196);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.contact .flex .box .info .child {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact .flex .box .info .child i {
+    color: crimson;
+    font-size: 2rem;
+}
+
+.contact .flex .box .info .child .content h6 {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.contact .flex .box span {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    color: rgb(196, 196, 196);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contact .flex .box .icons i {
+    padding: .75rem;
+    font-size: 1.2rem;
+    background-color: #1a1a1a;
+    border-radius: 9999px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.contact .flex .box .icons i:hover {
+    background-color: crimson;
+}
+
+.contact .flex form {
+    flex: 1 1 42rem
+}
+
+.contact .flex form .cover {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact .flex form input {
+    width: 100%;
+    padding: .75rem;
+    background-color: #1a1a1a;
+    color: rgb(179, 179, 179);
+    border-radius: 9999px;
+}
+
+.contact .flex form textarea {
+    width: 100%;
+    padding: .75rem;
+    background-color: #1a1a1a;
+    color: rgb(179, 179, 179);
+    border-radius: .5rem;
+}
+
+.contact .flex form input::placeholder,
+.contact .flex form textarea::placeholder {
+    color: rgb(179, 179, 179);
+}
+
+.contact .flex form button {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    background-color: crimson;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.contact .flex form button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .navbar span {
+        display: none;
+    }
+    .home {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .home .flex {
+        justify-content: flex-start;
+    }
+
+    .home .flex,
+    .about .flex,
+    .about .flex .info .flex2 {
+        flex-direction: column;
+    }
+
+    .home .image img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .home .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .home .content span {
+        font-size: 1.4rem;
+    }
+
+    .about,
+    .skills,
+    .work,
+    .blogs,
+    .contact,
+    .education {
+        padding: 1rem;
+    }
+
+    .about h1,
+    .skills h1,
+    .work h1,
+    .blogs h1,
+    .contact h1,
+    .education h1 {
+        font-size: 3rem;
+    }
+
+    .about .flex .info,
+    .about .flex .count {
+        width: 100%;
+    }
+
+    .about .flex .info h6 {
+        font-size: 1.5rem;
+    }
+
+    .about .flex .info .flex2 ul li {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .about .flex .count .grid {
+        text-align: center;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .work .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .blogs .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact .flex {
+        flex-direction: column;
+    }
+
+    .contact .flex .box {
+        width: 100%;
+    }
+
+    .contact .flex form .cover {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .work .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .blogs .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.about .flex .count .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about .flex .count .grid2>* {
+    margin-top: 1rem;
+}

@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #2597f4;
+    border-radius: 5rem;
+}
+
+header {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    color: rgb(145, 145, 145);
+}
+
+header nav ul li a:hover {
+    color: #2597f4;
+}
+
+header .fa-bars,
+header .fa-times {
+    display: none;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #2597f4;
+}
+
+.logo span {
+    color: black;
+}
+
+.home .flex {
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    max-width: 32rem;
+}
+
+.home .image {
+    width: 50%;
+}
+
+.home .content h1 {
+    font-size: 2.6rem;
+    color: #131313;
+    line-height: 1.2;
+}
+
+.home .content p {
+    color: rgb(128, 128, 128);
+    line-height: 2;
+}
+
+.home .content button {
+    padding: .5rem 2rem;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.home .content button:hover {
+    border-color: #2597f4;
+    background-color: #2597f4;
+    color: whitesmoke;
+}
+
+.award {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: rgb(241, 241, 241);
+}
+
+.award .grid {
+    max-width: 72rem;
+    padding: 2rem 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1.5rem;
+}
+
+.award .grid .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award .grid .box img {
+    margin-left: 1rem;
+    width: 30%;
+}
+
+.award .grid .box .content {
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.award .grid .box h6 {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.award .grid .box span {
+    font-size: .9rem;
+    color: rgb(153, 153, 153);
+}
+
+.about {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about .flex {
+    display: flex;
+    align-items: center;
+}
+
+.about .content {
+    max-width: 32rem;
+}
+
+.about .image {
+    width: 50%;
+}
+
+.about .content h1 {
+    font-size: 2.6rem;
+    color: #131313;
+    line-height: 1.2;
+}
+
+.about .content p {
+    color: rgb(128, 128, 128);
+    line-height: 2;
+}
+
+.about .content button {
+    padding: .5rem 2rem;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.about .content button:hover {
+    border-color: #2597f4;
+    background-color: #2597f4;
+    color: whitesmoke;
+}
+
+.services {
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 1rem;
+}
+
+.services h3 {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+}
+
+.services h3 span {
+    color: #2597f4;
+}
+
+.services .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 72rem;
+}
+
+.services .grid .box {
+    background-color: white;
+    border: 2px solid #131313;
+    padding: 1rem;
+    text-align: center;
+}
+
+.services .grid .box:hover {
+    background-color: #131313;
+    color: white;
+}
+.services .grid .box:hover p{
+    color: white;
+}
+
+.services .grid .box img {
+    width: 30%;
+}
+
+.services .grid .box h6 {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.services .grid .box p {
+    color: rgb(151, 151, 151);
+    font-size: .9rem;
+    line-height: 2;
+}
+.Gallery h3 {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+}
+
+.Gallery h3 span {
+    color: #2597f4;
+}
+
+.Gallery .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-items: center;
+    margin: 2rem auto;
+    max-width: 72rem;
+}
+.Gallery .grid .box{
+    overflow: hidden;
+}
+.Gallery .grid .box img{
+    width: 100%;
+    cursor: pointer;
+}
+.Gallery .grid .box img:hover{
+    transform: scale(1.15);
+}
+
+.team h3 {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+}
+
+.team h3 span {
+    color: #2597f4;
+}
+.team .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-items: center;
+    margin: 2rem auto;
+    max-width: 72rem;
+}
+.team .grid .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.team .grid .box img{
+    width: 100%;
+}
+.team .grid .box h6{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.team .grid .box span{
+    font-weight: 400;
+    font-size: .8rem;
+}
+.team .grid .box ul{
+    overflow: hidden;
+}
+.team .grid .box ul li{
+    background-color: #131313;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0.25rem;
+    padding: .75rem;
+    cursor: pointer;
+    transform: translateY(-4rem);
+}
+.team .grid .box ul li:hover{
+    background-color: #2597f4;
+}
+.team .grid .box:hover ul li{
+    transform: translateY(0);
+}
+
+.contact{
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact .flex{
+    display: flex;
+    padding: 1rem;
+}
+
+.contact .map{
+    margin: 0 1rem;
+    width: 130%;
+}
+.contact .form{
+    padding: 1rem;
+    border: 2px solid black;
+}
+.contact .form h6{
+    font-size: 1.5rem;
+}
+.contact .form form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact .form input{
+    border: 2px solid black;
+    width: calc(50% - 1rem);
+    padding: 1rem 2rem;
+    margin: .5rem;
+}
+.contact .form input:focus,
+.contact .form textarea:focus{
+    background-color: #131313;
+    color: whitesmoke;
+}
+.contact .form textarea:focus::placeholder,
+.contact .form input:focus::placeholder{
+    color: whitesmoke;
+}
+.contact .form textarea{
+    border: 2px solid black;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: .5rem;
+}
+.contact button {
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    border-color: #2597f4;
+    background-color: #2597f4;
+    color: whitesmoke;
+}
+
+footer .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.5rem;
+    padding: 1rem;
+
+}
+footer .grid .child > *{
+   margin: 1rem 0;
+}
+footer .grid .news > *{
+   margin: .5rem 0;
+}
+footer .grid .box h6{
+   font-weight: 600;
+   font-size: 1.4rem;
+   color: #131313;
+}
+footer .grid .box span{
+   color: #2597f4;
+}
+
+footer .grid .box a{
+    color: rgb(63, 63, 63);
+    margin-left: .5rem;
+    font-weight: 300;
+    font-size: .9rem;
+}
+footer .grid .box a:hover{
+    margin-left: 1rem;
+    color: #2597f4;
+}
+
+footer .grid .box ul li{
+    background-color: #131313;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    padding: .75rem;
+    cursor: pointer;
+    text-align: center;
+}
+footer .grid .box ul li:hover{
+    background-color: #2597f4;
+}
+
+footer button {
+    padding: .75rem 2rem;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+footer button:hover {
+    border-color: #2597f4;
+    background-color: #2597f4;
+    color: whitesmoke;
+}
+footer input {
+    border: 2px solid #131313;
+    padding: 1rem .75rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header nav ul {
+        background-color: white;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header nav ul.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: .75rem 0;
+    }
+
+    header .fa-bars,
+    header .fa-times {
+        display: inline;
+    }
+
+    .home .flex {
+        flex-direction: column;
+    }
+
+    .home .image {
+        width: 70%;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h1 {
+        font-size: 2rem;
+    }
+
+    .award .grid .box {
+        flex-flow: column;
+    }
+
+    .about .flex {
+        flex-direction: column-reverse;
+    }
+
+    .about .image {
+        width: 70%;
+    }
+
+    .about .content {
+        text-align: center;
+    }
+
+    .about .content h1 {
+        font-size: 2rem;
+    }
+    .contact .flex{
+        flex-direction: column;
+    }
+    .contact .form input{
+        width: 100%;
+    }
+    .contact .map{
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
